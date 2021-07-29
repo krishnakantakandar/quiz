@@ -1,30 +1,88 @@
+.page{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 20% 30% 40% 10%;
+    grid-template-areas: "heading heading "
+                          "main-content pic"
+                          "nav nav "
+                          "footer footer";
+    /* background-image:url("back.jpg"); */
+    
+    
+}
+
+
 .heading{
     width: 100vw;
-    background-color: orange;
+ 
     text-align: center;
     height: 10vh;
+    grid-area: heading;
     display: flex;
     justify-content: center;
     font-family:  'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.heading >img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.main-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: main-content;
+
+}
+.about{
+    height: 70%;
+    width: 70%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(19, 15, 10);
+    
+}
+.about >p{
+    font-size: larger;
+    
+}
+.pic{
+    /* background-image: url("images/thnking.png"); */
+}
+.pic img{
+    height: 100%;
+    width: 100%;
+    /* opacity: 0.5; */
 }
 .catagogy{
     display: flex;
     flex-direction: column;
 }
 .catagory-btn{
-    width: 80px;
-    height: 60px;
-    margin-right: 10px ;
-    background-color: brown;
-    color: aliceblue;
+    width: 140px;
+    height: 140px;
+    margin-right: 20px ;
+    background-color: rgb(233, 233, 233);
+    color: rgb(70, 75, 80);
+    font-size: large;
+    border-radius: 15px;
+    box-shadow: -9px 0px 12px -7px #000000, 9px 0px 12px -7px #000000,
+  5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 .nav{
-    height: 90vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
+
     display: flex;
+    grid-area: nav;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    
+}
+.nav-image >img{
+    height: 50px;
+    height: 50px;
 }
 .main-cointain-q{
     width: 100vw;
@@ -103,4 +161,5 @@ h3{
     width :50%;
    height: 100%;
 }
+
 

@@ -52,7 +52,8 @@ const QuestionApi =[{
     catagory:"css",
     answer:"krishna kanta kandar"
     , selectedAnswer: ""
-    ,points: 0
+    ,points: 0,
+    
 },
 {
     id: 6,
@@ -72,6 +73,17 @@ const QuestionApi =[{
     option2:"krishna kanta",
     option3:"krishna kanta kandar",
     catagory:"java",
+    answer:"krishna kanta kandar"
+    , selectedAnswer: ""
+    ,points: 0
+},
+{
+    id: 7,
+    question:"what is your name",
+    option1:"krishna",
+    option2:"krishna kanta",
+    option3:"krishna kanta kandar",
+    catagory:"agriculture",
     answer:"krishna kanta kandar"
     , selectedAnswer: ""
     ,points: 0

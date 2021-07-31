@@ -4,6 +4,25 @@ import QuestionApi from "./QuestionsApi";
 const CatagoryDisplay = ({ SectionDisplay }) => {
   const [increment, setincrement] = useState(0);
   const [total, settotal] = useState(0);
+  const fucPrintStar = () => {
+    let arr = new Array(total);
+    console.log("lll", arr);
+
+    for (let i = 0; i < total; i++) arr[i] = 1;
+
+    return arr.map((val) => {
+      return (
+        <img
+          src="images/star.png"
+          style={{ width: "30px", height: "30px" }}
+        ></img>
+      );
+    });
+
+    // console.log(img);
+
+    // return [img1,im2........im10]
+  };
 
   const StoreAns = (SectionDisplay, increment) => {
     console.log("kjdh");
@@ -87,7 +106,11 @@ const CatagoryDisplay = ({ SectionDisplay }) => {
     console.log("totaluse sate", total);
     console.log("total variable", TotalPoints);
     document.getElementById("re").disabled = true;
+
     document.getElementById("time").style.display = "none";
+    document.getElementById("table").style.display = "block";
+    document.getElementById("button-re").style.display = "none";
+    document.getElementById("re-play").style.display = "block";
   };
   var x;
   var distance;
@@ -114,7 +137,7 @@ const CatagoryDisplay = ({ SectionDisplay }) => {
   ////
   const [TimmerStop, setTimmerStop] = useState(true);
   const getTime = () => {
-    var countDownDate = 20 * 60 * 1000 + new Date().getTime();
+    var countDownDate = 1 * 60 * 1000 + new Date().getTime();
 
     // Update the count down every 1 second
     x = setInterval(function () {
@@ -158,23 +181,47 @@ const CatagoryDisplay = ({ SectionDisplay }) => {
   ) {
     return (
       <>
-        <div className="main-cointain-q">
+        <div
+          className="main-cointain-q"
+          id="main-cointain-q"
+          // style={{ border: "1px solid blue" }}
+        >
+          <div className="header">
+            <img
+              src="images/ideas.png"
+              style={{ height: "50px", width: "50px" }}
+            ></img>
+            <p
+              onClick={() => {
+                window.location.reload();
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              HOME
+            </p>
+          </div>
+
+          {/* <div style={{ width: "100%", height: "10%", background: "red" }}>
+            <p>HOME</p>
+          </div> */}
           <div id="time">
             <div id="minutes">
-              <p id="p-mi"></p>
+              <p id="p-mi">00</p>
               <p id="sec">MINUTES</p>
             </div>
             <div id="seconds">
-              <p id="p-se"></p>
+              <p id="p-se">00</p>
               <p id="minu">SECONDS</p>
             </div>
           </div>
           <div class="card-view">
             <div className="questions">
-              question :<p>{SectionDisplay[increment].question}</p>
+              <p>
+                {`${increment + 1}.`} {SectionDisplay[increment].question}
+              </p>
             </div>
             <div className="options">
-              <div className="change-color">
+              <div className="change-color1">
                 {" "}
                 <input
                   type="radio"
@@ -184,7 +231,7 @@ const CatagoryDisplay = ({ SectionDisplay }) => {
                 ></input>
                 {SectionDisplay[increment].option1}
               </div>
-              <div className="change-color">
+              <div className="change-color2">
                 {" "}
                 <input
                   type="radio"
@@ -194,7 +241,7 @@ const CatagoryDisplay = ({ SectionDisplay }) => {
                 ></input>
                 {SectionDisplay[increment].option2}
               </div>
-              <div className="change-color">
+              <div className="change-color3">
                 {" "}
                 <input
                   type="radio"
@@ -204,7 +251,7 @@ const CatagoryDisplay = ({ SectionDisplay }) => {
                 ></input>
                 {SectionDisplay[increment].option3}
               </div>
-              <div className="change-color">
+              <div className="change-color4">
                 {" "}
                 <input
                   type="radio"
@@ -234,6 +281,10 @@ const CatagoryDisplay = ({ SectionDisplay }) => {
               next
             </button>
           </div>
+
+          <div className="footer">
+            <p>©copywrite to krishna kanta kandar</p>
+          </div>
         </div>
       </>
     );
@@ -242,7 +293,21 @@ const CatagoryDisplay = ({ SectionDisplay }) => {
       return (
         <>
           <div className="result-page">
-            <div id="time">
+            <div className="header" style={{ position: "absolute", top: "0" }}>
+              <img
+                src="images/ideas.png"
+                style={{ height: "50px", width: "50px" }}
+              ></img>
+              <p
+                onClick={() => {
+                  window.location.reload();
+                }}
+                style={{ cursor: "pointer" }}
+              >
+                HOME
+              </p>
+            </div>
+            <div id="time" style={{ position: "absolute", right: "10%" }}>
               <div id="minutes">
                 <p id="p-mi"></p>
                 <p id="sec">MINUTES</p>
@@ -252,37 +317,71 @@ const CatagoryDisplay = ({ SectionDisplay }) => {
                 <p id="minu">SECONDS</p>
               </div>
             </div>
+            <div className="block">
+              <p>RESULT</p>
+            </div>
             <div className="your-result">
-              <div className="result-head">
-                <p>YOUR RESULT</p>
+              <div className="result-star">{fucPrintStar()}</div>
+              <div className="score-text">{` YOUR SCORE :${total}`}</div>
+              <div className="total-text">MAX SCORE : 10</div>
+              <div className="button-re" id="button-re">
+                <div className="btn-submit">
+                  <button
+                    className="getResult"
+                    id="su"
+                    onClick={() => GetResult(SectionDisplay)}
+                  >
+                    Submit
+                  </button>
+                </div>
+                <div className="btn-rechck">
+                  {" "}
+                  <button
+                    className="reCheck"
+                    id="re"
+                    onClick={() => setincrement(0)}
+                  >
+                    Recheck
+                  </button>
+                </div>
               </div>
-              <div className="score-text">SCORE</div>
-              <div className="total-text">TOTAL</div>
-              <div className="score">
-                <h3 id="result">{total} </h3>
-              </div>
-              <div className="total">10</div>
-              <div className="share"> share yout result</div>
-              <div className="share-img"></div>
-              <div className="btn-submit">
-                <button
-                  className="getResult"
-                  id="su"
-                  onClick={() => GetResult(SectionDisplay)}
-                >
-                  Submit
-                </button>
-              </div>
-              <div className="btn-rechck">
-                {" "}
-                <button
-                  className="reCheck"
-                  id="re"
-                  onClick={() => setincrement(0)}
-                >
-                  Recheck
-                </button>
-              </div>
+              <p
+                id="re-play"
+                onClick={() => {
+                  window.location.reload();
+                }}
+                style={{ cursor: "pointer", display: "none" }}
+              >
+                RE-PLAY
+              </p>
+            </div>
+            <div className="table" id="table">
+              <table class="styled-table">
+                <thead>
+                  <tr>
+                    <th>Question</th>
+                    <th>Answer</th>
+                    <th>Your Answer</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {SectionDisplay.map((curEle) => {
+                    return (
+                      <tr>
+                        <td>{curEle.question}</td>
+                        <td>{curEle.answer}</td>
+                        <td>{curEle.selectedAnswer}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+            <div
+              className="footer"
+              style={{ position: "absolute", bottom: "0" }}
+            >
+              <p>©copywrite to krishna kanta kandar</p>
             </div>
           </div>
         </>

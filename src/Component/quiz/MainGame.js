@@ -59,7 +59,16 @@ const MainGame = () => {
             <p>Alloted time : 10 min</p>
           </div>
         </div>
-        <div className="footer"></div>
+        <div
+          style={{
+            position: "absolute",
+            bottom: "2px",
+            left: "50%",
+            transform: "translate(-50%,-50%)",
+          }}
+        >
+          <p> ©copywrite to krishna kanta kandar</p>
+        </div>
       </div>
       <div className="main-cointain-of-q">
         <CatagoryDisplay SectionDisplay={SectionDisplay}></CatagoryDisplay>

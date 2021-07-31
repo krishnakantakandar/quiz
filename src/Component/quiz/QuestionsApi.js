@@ -7,8 +7,8 @@ const QuestionApi = [
     option3: " Home Tool Markup Language",
     catagory: "html",
 
-    answer: "krishna kanta kandar",
-    selectedAnswer: "",
+    answer: "Hyper Text Markup Language",
+    selectedAnswer: "Not Answred",
     points: 0,
   },
   {
@@ -19,7 +19,7 @@ const QuestionApi = [
     option3: "pranab kumar kandar",
     catagory: "html",
     answer: "pranab kumar kandar",
-    selectedAnswer: "",
+    selectedAnswer: "Not Answred",
     points: 0,
   },
   {
@@ -30,7 +30,7 @@ const QuestionApi = [
     option3: "krishna kanta kandar",
     catagory: "css",
     answer: "krishna kanta kandar",
-    selectedAnswer: "",
+    selectedAnswer: "Not Answred",
     points: 0,
   },
   {
@@ -41,7 +41,7 @@ const QuestionApi = [
     option3: "krishna kanta kandar",
     catagory: "css",
     answer: "krishna kanta kandar",
-    selectedAnswer: "",
+    selectedAnswer: "Not Answred",
     points: 0,
   },
   {
@@ -52,7 +52,7 @@ const QuestionApi = [
     option3: "krishna kanta kandar",
     catagory: "css",
     answer: "krishna kanta kandar",
-    selectedAnswer: "",
+    selectedAnswer: "Not Answred",
     points: 0,
   },
   {
@@ -63,7 +63,7 @@ const QuestionApi = [
     option3: "krishna kanta kandar",
     catagory: "java",
     answer: "krishna kanta kandar",
-    selectedAnswer: "",
+    selectedAnswer: "Not Answred",
     points: 0,
   },
   {
@@ -74,7 +74,7 @@ const QuestionApi = [
     option3: "krishna kanta kandar",
     catagory: "java",
     answer: "krishna kanta kandar",
-    selectedAnswer: "",
+    selectedAnswer: "Not Answred",
     points: 0,
   },
   {
@@ -85,7 +85,7 @@ const QuestionApi = [
     option3: "krishna kanta kandar",
     catagory: "agriculture",
     answer: "krishna kanta kandar",
-    selectedAnswer: "",
+    selectedAnswer: "Not Answred",
     points: 0,
   },
 ];

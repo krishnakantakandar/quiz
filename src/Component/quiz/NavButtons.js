@@ -3,7 +3,6 @@ import "./style.css";
 import Catagogypictures from "./catagoryPic";
 
 const NavButtons = ({ QuestionType, filterTheCatagory }) => {
-  console.log(Catagogypictures.html);
   return (
     <>
       {QuestionType.map((curEle) => {

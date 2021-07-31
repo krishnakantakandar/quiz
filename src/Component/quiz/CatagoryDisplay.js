@@ -163,9 +163,9 @@ const CatagoryDisplay = ({ SectionDisplay }) => {
       if (distance < 0 || !TimmerStop) {
         clearInterval(x);
 
-        setincrement(3);
-        document.getElementById("re").disabled = true;
-        if (k3) k3.innerHTML = "time up";
+        setincrement(10);
+        // document.getElementById("re").disabled = true;
+        // if (k3) k3.innerHTML = "time up";
 
         GetResult(SectionDisplay);
       }
@@ -265,10 +265,10 @@ const CatagoryDisplay = ({ SectionDisplay }) => {
                 <input
                   type="radio"
                   name={SectionDisplay[increment].id}
-                  value={SectionDisplay[increment].option3}
+                  value={SectionDisplay[increment].option4}
                   onClick={() => Check(SectionDisplay, increment)}
                 ></input>
-                {SectionDisplay[increment].option3}
+                {SectionDisplay[increment].option4}
               </div>
             </div>
           </div>

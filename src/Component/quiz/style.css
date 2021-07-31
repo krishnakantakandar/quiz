@@ -139,7 +139,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 30px;
   font-family: monospace;
 
   border-radius: 19px;
@@ -179,7 +179,7 @@ p {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   align-items: center;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .change-color2 {
@@ -196,7 +196,7 @@ p {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   align-items: center;
-  font-size: 25px;
+  font-size: 20px;
   align-items: center;
 }
 
@@ -214,7 +214,7 @@ p {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   align-items: center;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .change-color4 {
@@ -230,7 +230,7 @@ p {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   align-items: center;
-  font-size: 25px;
+  font-size: 20px;
   background-color: rgb(62, 168, 204);
   align-items: center;
 }
@@ -403,6 +403,8 @@ h3 {
   height: 50%;
   display: none;
   width: 40%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .styled-table {
   border-collapse: collapse;

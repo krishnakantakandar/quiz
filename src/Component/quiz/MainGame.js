@@ -30,7 +30,7 @@ const MainGame = () => {
       <div className="page" id="page1">
         <div className="heading">
           <img src="images/quiz.jpg"></img>
-          <p>wellcom to world quiz</p>
+          <p>QUIZ</p>
         </div>
         <div className="main-content">
           <div className="about">

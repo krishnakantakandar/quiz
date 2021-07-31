@@ -189,15 +189,24 @@ const CatagoryDisplay = ({ SectionDisplay }) => {
           <div className="header">
             <img
               src="images/ideas.png"
-              style={{ height: "50px", width: "50px" }}
+              style={{ height: "45px", width: "45px" }}
             ></img>
             <p
               onClick={() => {
                 window.location.reload();
               }}
-              style={{ cursor: "pointer" }}
+              style={{
+                cursor: "pointer",
+                height: "100%",
+                width: "7%",
+                background: "rgb(73,21,155)",
+                display: "flex",
+
+                alignItems: "center",
+                color: "white",
+              }}
             >
-              HOME
+              <p> HOME</p>
             </p>
           </div>
 
@@ -296,15 +305,24 @@ const CatagoryDisplay = ({ SectionDisplay }) => {
             <div className="header" style={{ position: "absolute", top: "0" }}>
               <img
                 src="images/ideas.png"
-                style={{ height: "50px", width: "50px" }}
+                style={{ height: "45px", width: "45px" }}
               ></img>
               <p
                 onClick={() => {
                   window.location.reload();
                 }}
-                style={{ cursor: "pointer" }}
+                style={{
+                  cursor: "pointer",
+                  height: "100%",
+                  width: "7%",
+                  background: "rgb(73,21,155)",
+                  display: "flex",
+
+                  alignItems: "center",
+                  color: "white",
+                }}
               >
-                HOME
+                <p> HOME</p>
               </p>
             </div>
             <div id="time" style={{ position: "absolute", right: "10%" }}>

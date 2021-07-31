@@ -28,10 +28,28 @@ p {
   font-family: "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode",
     Geneva, Verdana, sans-serif;
 }
+.heading p {
+  font-size: 40px;
+  color: #dddddd;
+}
 .heading > img {
   height: 100px;
   width: 100px;
   border-radius: 50%;
+}
+.description {
+  font-size: 20px;
+  margin-top: 20px;
+  box-shadow: -9px 0px 12px -7px #000000, 9px 0px 12px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  width: 20%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: brown;
 }
 .main-content {
   display: flex;
@@ -121,8 +139,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: larger;
-  font-family: "Arial Narrow Bold", sans-serif;
+  font-size: 40px;
+  font-family: monospace;
 
   border-radius: 19px;
 }
@@ -131,6 +149,7 @@ p {
   flex-wrap: wrap;
   height: 73%;
   width: 100%;
+  font-size: larger;
 
   align-items: center;
   justify-content: center;
@@ -160,7 +179,7 @@ p {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   align-items: center;
   cursor: pointer;
-  font-size: large;
+  font-size: 25px;
 }
 
 .change-color2 {
@@ -173,11 +192,11 @@ p {
   cursor: pointer;
   margin-bottom: 0;
   justify-content: center;
-  background-color: rgb(247, 173, 55);
+  background-color: rgb(211, 139, 23);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   align-items: center;
-  font-size: large;
+  font-size: 25px;
   align-items: center;
 }
 
@@ -195,7 +214,7 @@ p {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   align-items: center;
-  font-size: large;
+  font-size: 25px;
 }
 
 .change-color4 {
@@ -211,15 +230,11 @@ p {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   align-items: center;
-  font-size: large;
+  font-size: 25px;
   background-color: rgb(62, 168, 204);
   align-items: center;
 }
-.change-color:hover {
-  background-color: rgb(42, 160, 48);
 
-  color: aliceblue;
-}
 .submit {
   display: flex;
   justify-content: center;
@@ -248,6 +263,7 @@ h3 {
   margin-right: 100px;
   margin-bottom: 50px;
   background-color: rgb(219, 133, 133);
+  font-size: 20px;
 }
 .previous {
   /* width: 40%;
@@ -258,9 +274,12 @@ h3 {
   width: 90px;
   background-color: rgb(219, 133, 133);
   color: aliceblue;
+  margin-bottom: 50px;
+  margin-right: 10px;
   height: 90px;
   border: 1px solid red;
   border-radius: 50%;
+  font-size: 20px;
 }
 .next:hover {
   /* width: 45%; */

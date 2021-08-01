@@ -56,7 +56,7 @@ const MainGame = () => {
           </div>
           <div className="description">
             <p>No. of Questions 10</p>
-            <p>Alloted time : 10 min</p>
+            <p>Alloted time : 2 min</p>
           </div>
         </div>
         <div

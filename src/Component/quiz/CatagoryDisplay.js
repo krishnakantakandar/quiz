@@ -132,7 +132,15 @@ const CatagoryDisplay = ({ SectionDisplay }) => {
     ) {
       getTime();
     }
+    if (increment == 0 && document.getElementById("previous"))
+      document.getElementById("previous").disabled = true;
   }, [SectionDisplay]);
+  useEffect(() => {
+    if (increment > 0 && document.getElementById("previous"))
+      document.getElementById("previous").disabled = false;
+    if (increment == 0 && document.getElementById("previous"))
+      document.getElementById("previous").disabled = true;
+  }, [increment]);
 
   ////
   const [TimmerStop, setTimmerStop] = useState(true);
@@ -275,6 +283,7 @@ const CatagoryDisplay = ({ SectionDisplay }) => {
           <div className="changeQuestion">
             <button
               className="previous"
+              id="previous"
               onClick={() => {
                 setincrement(increment - 1);
               }}
